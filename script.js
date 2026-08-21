@@ -2,6 +2,26 @@
 (function () {
   'use strict';
 
+  /* ---- sticky call bar reveals once ----
+     It would cover the hero CTAs on a short phone screen, so it waits until
+     the visitor has scrolled into the services section, then stays. */
+  var bar = document.querySelector('.stickybar');
+  var trigger = document.getElementById('services');
+  if (bar && trigger) {
+    if (!('IntersectionObserver' in window)) {
+      bar.classList.add('is-in');
+    } else {
+      var barIO = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          bar.classList.add('is-in');
+          barIO.disconnect();
+        });
+      }, { rootMargin: '0px 0px -15% 0px', threshold: 0 });
+      barIO.observe(trigger);
+    }
+  }
+
   /* ---- sliding gallery ----
      Native scroll-snap does the work; the buttons just nudge it,
      so touch, trackpad, and keyboard all behave the same. */

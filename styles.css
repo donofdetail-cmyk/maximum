@@ -345,7 +345,13 @@ p{margin:0 0 1.1em}
    ========================================================================== */
 .stickybar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:120;
   border-top:1px solid rgba(185,192,199,.2);background:rgba(10,11,13,.95);backdrop-filter:blur(10px);
-  padding:.6rem .6rem calc(.6rem + env(safe-area-inset-bottom));gap:.55rem}
+  padding:.6rem .6rem calc(.6rem + env(safe-area-inset-bottom));gap:.55rem;
+  /* stays out of the way over the hero, then slides up once the visitor
+     reaches the services section and stays put from there down */
+  transform:translateY(115%);visibility:hidden;
+  transition:transform .5s cubic-bezier(.22,.75,.3,1),visibility 0s linear .5s;
+}
+.stickybar.is-in{transform:none;visibility:visible;transition:transform .5s cubic-bezier(.22,.75,.3,1),visibility 0s}
 .stickybar a{
   flex:1;display:flex;align-items:center;justify-content:center;min-height:50px;
   text-decoration:none;border-radius:var(--r);font-family:var(--ff-d);
@@ -387,6 +393,7 @@ p{margin:0 0 1.1em}
 }
 
 @media (prefers-reduced-motion:reduce){
+  .stickybar{transform:none;visibility:visible}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
   .sweep{color:#fff;background:none;-webkit-text-fill-color:#fff}
 }
