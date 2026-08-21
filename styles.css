@@ -346,8 +346,8 @@ p{margin:0 0 1.1em}
 .stickybar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:120;
   border-top:1px solid rgba(185,192,199,.2);background:rgba(10,11,13,.95);backdrop-filter:blur(10px);
   padding:.6rem .6rem calc(.6rem + env(safe-area-inset-bottom));gap:.55rem;
-  /* stays out of the way over the hero, then slides up once the visitor
-     reaches the services section and stays put from there down */
+  /* stays out of the way while the hero is on screen, slides up once the
+     visitor scrolls past it, slides back down on the way up */
   transform:translateY(115%);visibility:hidden;
   transition:transform .5s cubic-bezier(.22,.75,.3,1),visibility 0s linear .5s;
 }

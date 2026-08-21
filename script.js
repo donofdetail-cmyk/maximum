@@ -2,23 +2,22 @@
 (function () {
   'use strict';
 
-  /* ---- sticky call bar reveals once ----
-     It would cover the hero CTAs on a short phone screen, so it waits until
-     the visitor has scrolled into the services section, then stays. */
+  /* ---- sticky call bar ----
+     Hidden while the hero is on screen, since the hero has its own call and
+     text buttons and the bar would cover them. Shows as soon as the hero is
+     mostly scrolled past, hides again on the way back up. */
   var bar = document.querySelector('.stickybar');
-  var trigger = document.getElementById('services');
-  if (bar && trigger) {
+  var hero = document.querySelector('.hero');
+  if (bar && hero) {
     if (!('IntersectionObserver' in window)) {
       bar.classList.add('is-in');
     } else {
       var barIO = new IntersectionObserver(function (entries) {
         entries.forEach(function (en) {
-          if (!en.isIntersecting) return;
-          bar.classList.add('is-in');
-          barIO.disconnect();
+          bar.classList.toggle('is-in', !en.isIntersecting);
         });
-      }, { rootMargin: '0px 0px -15% 0px', threshold: 0 });
-      barIO.observe(trigger);
+      }, { threshold: 0.32 });
+      barIO.observe(hero);
     }
   }
 
