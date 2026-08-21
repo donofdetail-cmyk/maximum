@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# local dev config (contains absolute paths to a scratch dir)
+.claude/
+
+# large working sources, not needed to build or serve the site
+Copy of Pictures.docx
+fleet.png

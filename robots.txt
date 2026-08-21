@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# AI crawlers are welcome. Being cited in an AI answer is free advertising.
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+# TODO: swap the domain below before publishing
+Sitemap: https://REPLACE-WITH-YOUR-DOMAIN.com/sitemap.xml
