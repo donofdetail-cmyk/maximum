@@ -40,6 +40,7 @@ body{
   margin:0; background:var(--jet); color:var(--chrome);
   font:400 var(--t-b)/1.65 var(--ff-b);
   -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  overflow-wrap:break-word;
 }
 img,svg{max-width:100%;height:auto;display:block}
 a{color:inherit}
@@ -315,6 +316,7 @@ p{margin:0 0 1.1em}
    ========================================================================== */
 .ftr{background:var(--jet);border-top:1px solid rgba(185,192,199,.14);padding-top:clamp(3rem,6vw,4.5rem)}
 .ftr-in{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2.4rem}
+.ftr-in > *{min-width:0}
 .ftr-brand img{width:auto;height:auto;max-width:170px;margin-bottom:1.3rem}
 .ftr-brand p{font-size:var(--t-sm);color:var(--chrome-dim);max-width:38ch}
 .ftr h3{font-size:var(--t-sm);letter-spacing:.2em;text-transform:uppercase;color:var(--chrome-dim);font-variation-settings:"wdth" 104,"wght" 700}
@@ -324,7 +326,7 @@ p{margin:0 0 1.1em}
 .ftr-links a{display:inline-flex;align-items:center;min-height:44px}
 .ftr-social a{display:inline-flex;align-items:center;min-height:44px}
 .ftr-links a:hover,.nap a:hover{color:#fff;text-decoration:underline}
-.nap{font-size:var(--t-sm);line-height:1.85;color:var(--chrome-dim)}
+.nap{font-size:var(--t-sm);line-height:1.85;color:var(--chrome-dim);overflow-wrap:anywhere}
 .nap b{color:#fff;font-size:var(--t-b)}
 .hours{font-size:var(--t-sm);color:var(--chrome-dim);line-height:1.7}
 .hours b{color:#fff}
@@ -374,6 +376,7 @@ p{margin:0 0 1.1em}
   .gal-btn{display:none}
   .gal-item{flex-basis:min(80%,300px)}
   .gal-track{padding-inline:0}
+  .ftr-in{grid-template-columns:1fr;gap:2rem}
   .stickybar{display:flex}
   .ftr-btm{padding-bottom:5.5rem}
   .hero-btns .btn{flex:1 1 100%}
