@@ -357,9 +357,10 @@ p{margin:0 0 1.1em}
    ========================================================================== */
 @media (max-width:1024px){
   :root{--t-h1:3.1rem;--t-h2:2.2rem;--t-h3:1.6rem}
-  /* nav and header CTA go together. the sticky bar covers call and text below
-     this width, so the header is just the logo. */
-  .nav,  .hdr-in{justify-content:flex-start;min-height:60px}
+  /* below this width the header is just the logo. call and text live in the
+     sticky bar at the bottom of the screen, always in reach. */
+  .nav{display:none}
+  .hdr-in{justify-content:flex-start;min-height:60px}
   .svc-grid,.rev-grid{grid-template-columns:repeat(2,1fr)}
   .gal-item{flex-basis:clamp(240px,44%,340px)}
   .who-grid,.edu-cols{grid-template-columns:1fr}
@@ -368,9 +369,7 @@ p{margin:0 0 1.1em}
 }
 @media (max-width:760px){
   :root{--t-h1:2.35rem;--t-h2:1.85rem;--t-h3:1.45rem;--t-h4:1.28rem;--t-lg:1.14rem}
-  /* mobile header is the logo and nothing else. Call and text live in the
-     sticky bar at the bottom of the screen, which is always in reach. */
-    .hdr-in{gap:.7rem;justify-content:flex-start;min-height:60px}
+  .hdr-in{gap:.7rem;min-height:60px}
   .svc-grid,.rev-grid{grid-template-columns:1fr}
   .gal-btn{display:none}
   .gal-item{flex-basis:min(80%,300px)}
@@ -381,7 +380,7 @@ p{margin:0 0 1.1em}
 }
 @media (max-width:400px){
   :root{--t-h1:2.05rem}
-    .brand img{height:42px}
+  .brand img{height:42px}
 }
 
 @media (prefers-reduced-motion:reduce){
