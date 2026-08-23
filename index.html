@@ -7,13 +7,13 @@
 <!-- ============================================================
      MAXIMUM MOBILE DETAILING  ·  single-page site
      BEFORE YOU PUBLISH, do one find-and-replace:
-       REPLACE-WITH-YOUR-DOMAIN.com  ->  your real domain
+       maximummobiledetail.com  ->  your real domain
      Everything else marked "TODO" is listed in TODO.md
      ============================================================ -->
 
 <title>Mobile Detailing Reno NV | Ceramic Coating &amp; Paint Correction</title>
 <meta name="description" content="Mobile detailing in Reno and Sparks. Car, RV, boat and motorcycle detailing, paint correction and ceramic coating at your driveway. Call 775-374-1281.">
-<link rel="canonical" href="https://REPLACE-WITH-YOUR-DOMAIN.com/">
+<link rel="canonical" href="https://maximummobiledetail.com/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#0A0B0D">
 <meta name="geo.region" content="US-NV">
@@ -26,16 +26,16 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Mobile Detailing in Reno, NV | Maximum Mobile Detailing">
 <meta property="og:description" content="Car, RV, boat and motorcycle detailing, paint correction and ceramic coating. We come to your driveway anywhere within 20 miles of Reno.">
-<meta property="og:url" content="https://REPLACE-WITH-YOUR-DOMAIN.com/">
+<meta property="og:url" content="https://maximummobiledetail.com/">
 <!-- TODO: shoot a real 1200x630 og-image (truck + a finished car). Logo is a stand-in. -->
-<meta property="og:image" content="https://REPLACE-WITH-YOUR-DOMAIN.com/assets/img/og-image.jpg">
+<meta property="og:image" content="https://maximummobiledetail.com/assets/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Maximum Mobile Detailing, Reno Nevada">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mobile Detailing in Reno, NV | Maximum Mobile Detailing">
 <meta name="twitter:description" content="Car, RV, boat and motorcycle detailing, paint correction and ceramic coating, at your driveway in Reno and Sparks.">
-<meta name="twitter:image" content="https://REPLACE-WITH-YOUR-DOMAIN.com/assets/img/og-image.jpg">
+<meta name="twitter:image" content="https://maximummobiledetail.com/assets/img/og-image.jpg">
 
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="assets/img/icon-192.png" sizes="192x192" type="image/png">
@@ -389,6 +389,8 @@
      No prices anywhere: the site quotes every job.
      aggregateRating is REAL: 5.0 from 66 reviews, read off the Google Business
      Profile on 2026-08-20. Keep the count roughly current or drop the block.
+     Everything else here is verified: legal name and founding date from the
+     state/BBB listings, hours and area from the GBP.
      postalCode 89512 taken from the public BBB and Yahoo listings. Confirm against the GBP.
 ========================================== -->
 <script type="application/ld+json">
@@ -400,15 +402,24 @@
     "LocalBusiness",
     "AutoWash"
    ],
-   "@id": "https://REPLACE-WITH-YOUR-DOMAIN.com/#business",
+   "@id": "https://maximummobiledetail.com/#business",
    "name": "Maximum Mobile Detailing",
    "alternateName": "Maximum Mobile Detailing Reno",
-   "description": "Mobile detailing in Reno, Nevada. Car, RV, boat and motorcycle detailing, paint correction and ceramic coating performed at the customer's location across Reno, Sparks and a 20 mile radius.",
-   "url": "https://REPLACE-WITH-YOUR-DOMAIN.com/",
+   "description": "Mobile detailing in Reno, Nevada. Car, truck, RV, boat and motorcycle detailing, paint correction and ceramic coating performed at the customer's home, office or storage lot across Reno, Sparks and roughly 20 miles around.",
+   "url": "https://maximummobiledetail.com/",
    "telephone": "+1-775-374-1281",
    "email": "maximobiledetailing@gmail.com",
-   "image": "https://REPLACE-WITH-YOUR-DOMAIN.com/assets/img/og-image.jpg",
-   "logo": "https://REPLACE-WITH-YOUR-DOMAIN.com/assets/img/logo-512.png",
+   "image": [
+    "https://maximummobiledetail.com/assets/img/og-image.jpg",
+    "https://maximummobiledetail.com/assets/img/svc-car-detailing.webp",
+    "https://maximummobiledetail.com/assets/img/svc-ceramic-coating.webp"
+   ],
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://maximummobiledetail.com/assets/img/logo-512.png",
+    "width": 512,
+    "height": 512
+   },
    "currenciesAccepted": "USD",
    "paymentAccepted": "Cash, Credit Card, Debit Card",
    "founder": {
@@ -649,16 +660,18 @@
        "description": "Full interior and exterior mobile detailing for cars, trucks and SUVs, including hand wash, clay bar decontamination, sealant, steam extraction and leather care.",
        "serviceType": "Car and Truck Detailing",
        "provider": {
-        "@id": "https://REPLACE-WITH-YOUR-DOMAIN.com/#business"
+        "@id": "https://maximummobiledetail.com/#business"
        },
        "areaServed": {
-        "@type": "City",
-        "name": "Reno",
-        "containedInPlace": {
-         "@type": "State",
-         "name": "Nevada"
-        }
-       }
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+         "@type": "GeoCoordinates",
+         "latitude": 39.5296,
+         "longitude": -119.8138
+        },
+        "geoRadius": "32186"
+       },
+       "url": "https://maximummobiledetail.com/#car-detailing"
       },
       "availability": "https://schema.org/InStock"
      },
@@ -670,16 +683,18 @@
        "description": "Machine polishing to permanently remove swirl marks, spider webbing, water spot etching and light scratches from automotive clear coat.",
        "serviceType": "Paint Correction",
        "provider": {
-        "@id": "https://REPLACE-WITH-YOUR-DOMAIN.com/#business"
+        "@id": "https://maximummobiledetail.com/#business"
        },
        "areaServed": {
-        "@type": "City",
-        "name": "Reno",
-        "containedInPlace": {
-         "@type": "State",
-         "name": "Nevada"
-        }
-       }
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+         "@type": "GeoCoordinates",
+         "latitude": 39.5296,
+         "longitude": -119.8138
+        },
+        "geoRadius": "32186"
+       },
+       "url": "https://maximummobiledetail.com/#paint-correction"
       },
       "availability": "https://schema.org/InStock"
      },
@@ -691,16 +706,18 @@
        "description": "Professional ceramic coating application that bonds to the clear coat and provides multi-year UV and chemical protection with hydrophobic behavior.",
        "serviceType": "Ceramic Coating",
        "provider": {
-        "@id": "https://REPLACE-WITH-YOUR-DOMAIN.com/#business"
+        "@id": "https://maximummobiledetail.com/#business"
        },
        "areaServed": {
-        "@type": "City",
-        "name": "Reno",
-        "containedInPlace": {
-         "@type": "State",
-         "name": "Nevada"
-        }
-       }
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+         "@type": "GeoCoordinates",
+         "latitude": 39.5296,
+         "longitude": -119.8138
+        },
+        "geoRadius": "32186"
+       },
+       "url": "https://maximummobiledetail.com/#ceramic-coating"
       },
       "availability": "https://schema.org/InStock"
      },
@@ -712,16 +729,18 @@
        "description": "Mobile RV and trailer detailing including black streak and oxidation removal, gel coat polishing, roof cleaning and full interior detail.",
        "serviceType": "RV Detailing",
        "provider": {
-        "@id": "https://REPLACE-WITH-YOUR-DOMAIN.com/#business"
+        "@id": "https://maximummobiledetail.com/#business"
        },
        "areaServed": {
-        "@type": "City",
-        "name": "Reno",
-        "containedInPlace": {
-         "@type": "State",
-         "name": "Nevada"
-        }
-       }
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+         "@type": "GeoCoordinates",
+         "latitude": 39.5296,
+         "longitude": -119.8138
+        },
+        "geoRadius": "32186"
+       },
+       "url": "https://maximummobiledetail.com/#rv-detailing"
       },
       "availability": "https://schema.org/InStock"
      },
@@ -733,16 +752,18 @@
        "description": "Mobile boat and watercraft detailing including waterline stain removal, gel coat compounding and polishing, and vinyl seat cleaning.",
        "serviceType": "Boat Detailing",
        "provider": {
-        "@id": "https://REPLACE-WITH-YOUR-DOMAIN.com/#business"
+        "@id": "https://maximummobiledetail.com/#business"
        },
        "areaServed": {
-        "@type": "City",
-        "name": "Reno",
-        "containedInPlace": {
-         "@type": "State",
-         "name": "Nevada"
-        }
-       }
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+         "@type": "GeoCoordinates",
+         "latitude": 39.5296,
+         "longitude": -119.8138
+        },
+        "geoRadius": "32186"
+       },
+       "url": "https://maximummobiledetail.com/#boat-detailing"
       },
       "availability": "https://schema.org/InStock"
      },
@@ -754,16 +775,18 @@
        "description": "Mobile motorcycle detailing including chrome and aluminum polishing, chain and engine degreasing, leather care and paint sealing.",
        "serviceType": "Motorcycle Detailing",
        "provider": {
-        "@id": "https://REPLACE-WITH-YOUR-DOMAIN.com/#business"
+        "@id": "https://maximummobiledetail.com/#business"
        },
        "areaServed": {
-        "@type": "City",
-        "name": "Reno",
-        "containedInPlace": {
-         "@type": "State",
-         "name": "Nevada"
-        }
-       }
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+         "@type": "GeoCoordinates",
+         "latitude": 39.5296,
+         "longitude": -119.8138
+        },
+        "geoRadius": "32186"
+       },
+       "url": "https://maximummobiledetail.com/#motorcycle-detailing"
       },
       "availability": "https://schema.org/InStock"
      }
@@ -777,38 +800,64 @@
     "reviewCount": 66,
     "bestRating": "5",
     "worstRating": "1"
-   }
+   },
+   "contactPoint": [
+    {
+     "@type": "ContactPoint",
+     "telephone": "+1-775-374-1281",
+     "contactType": "customer service",
+     "areaServed": "US-NV",
+     "availableLanguage": "English"
+    }
+   ],
+   "slogan": "We come to you.",
+   "additionalType": "https://en.wikipedia.org/wiki/Auto_detailing",
+   "isAccessibleForFree": false
   },
   {
    "@type": "WebSite",
-   "@id": "https://REPLACE-WITH-YOUR-DOMAIN.com/#website",
-   "url": "https://REPLACE-WITH-YOUR-DOMAIN.com/",
+   "@id": "https://maximummobiledetail.com/#website",
+   "url": "https://maximummobiledetail.com/",
    "name": "Maximum Mobile Detailing",
    "publisher": {
-    "@id": "https://REPLACE-WITH-YOUR-DOMAIN.com/#business"
+    "@id": "https://maximummobiledetail.com/#business"
    },
-   "inLanguage": "en-US"
+   "inLanguage": "en-US",
+   "description": "Mobile detailing in Reno, Nevada. Car, truck, RV, boat and motorcycle detailing, paint correction and ceramic coating performed at the customer's home, office or storage lot across Reno, Sparks and roughly 20 miles around."
   },
   {
    "@type": "WebPage",
-   "@id": "https://REPLACE-WITH-YOUR-DOMAIN.com/#webpage",
-   "url": "https://REPLACE-WITH-YOUR-DOMAIN.com/",
+   "@id": "https://maximummobiledetail.com/#webpage",
+   "url": "https://maximummobiledetail.com/",
    "name": "Mobile Detailing Reno NV | Ceramic Coating & Paint Correction",
    "isPartOf": {
-    "@id": "https://REPLACE-WITH-YOUR-DOMAIN.com/#website"
+    "@id": "https://maximummobiledetail.com/#website"
    },
    "about": {
-    "@id": "https://REPLACE-WITH-YOUR-DOMAIN.com/#business"
+    "@id": "https://maximummobiledetail.com/#business"
    },
    "primaryImageOfPage": {
     "@type": "ImageObject",
-    "url": "https://REPLACE-WITH-YOUR-DOMAIN.com/assets/img/og-image.jpg"
+    "url": "https://maximummobiledetail.com/assets/img/og-image.jpg"
    },
-   "inLanguage": "en-US"
+   "inLanguage": "en-US",
+   "description": "Mobile detailing in Reno and Sparks. Car, RV, boat and motorcycle detailing, paint correction and ceramic coating at your driveway.",
+   "datePublished": "2026-08-21",
+   "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://maximummobiledetail.com/"
+     }
+    ]
+   }
   },
   {
    "@type": "FAQPage",
-   "@id": "https://REPLACE-WITH-YOUR-DOMAIN.com/#faq",
+   "@id": "https://maximummobiledetail.com/#faq",
    "mainEntity": [
     {
      "@type": "Question",

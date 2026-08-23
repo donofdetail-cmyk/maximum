@@ -13,5 +13,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-# TODO: swap the domain below before publishing
-Sitemap: https://REPLACE-WITH-YOUR-DOMAIN.com/sitemap.xml
+Sitemap: https://maximummobiledetail.com/sitemap.xml

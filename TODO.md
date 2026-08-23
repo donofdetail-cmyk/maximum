@@ -10,16 +10,9 @@ and nothing to activate.
 
 ## 1. Blockers
 
-### 1.1 Domain
-One find-and-replace across the folder:
-
-`REPLACE-WITH-YOUR-DOMAIN.com` → your real domain
-
-It appears in `index.html` (canonical, OG, Twitter, JSON-LD), `robots.txt`, and `sitemap.xml`.
-
-```bash
-grep -rl 'REPLACE-WITH-YOUR-DOMAIN.com' . | xargs sed -i '' 's/REPLACE-WITH-YOUR-DOMAIN.com/yourdomain.com/g'
-```
+### 1.1 Domain — DONE
+Live domain is `https://maximummobiledetail.com`. It is set in the canonical tag,
+OG and Twitter tags, the JSON-LD, robots.txt and sitemap.xml. Nothing left to swap.
 
 ### 1.2 Replace the placeholder reviews
 `index.html`, the REVIEWS block. All three quotes are placeholder text and say so.
