@@ -210,7 +210,7 @@ p{margin:0 0 1.1em}
 .gal{position:relative;display:flex;align-items:center;gap:.75rem}
 .gal-track{
   display:flex;gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;
-  scroll-behavior:smooth;scroll-padding-inline:0;padding:.4rem .25rem 1.2rem;
+  scroll-behavior:smooth;scroll-padding-inline:0;padding:.4rem .25rem .6rem;
   scrollbar-width:none;-ms-overflow-style:none;flex:1;min-width:0;
 }
 .gal-track::-webkit-scrollbar{display:none}
@@ -236,8 +236,6 @@ p{margin:0 0 1.1em}
   font-family:var(--ff-d);font-variation-settings:"wdth" 118,"wght" 800;
   font-size:var(--t-sm);letter-spacing:.2em;text-transform:uppercase;color:var(--chrome-dim);
 }
-.gal-item figcaption{margin-top:.75rem;font-size:var(--t-sm);color:var(--ink-2)}
-.gal-item figcaption b{display:block;color:var(--ink);font-family:var(--ff-d);font-variation-settings:"wdth" 104,"wght" 700}
 .gal-btn{
   flex:none;width:48px;height:48px;border-radius:50%;cursor:pointer;
   display:grid;place-items:center;color:var(--ink);
@@ -395,8 +393,17 @@ p{margin:0 0 1.1em}
   :root{--t-h1:2.35rem;--t-h2:1.85rem;--t-h3:1.45rem;--t-h4:1.28rem;--t-lg:1.14rem}
   .hdr-in{gap:.7rem;min-height:60px}
   .svc-grid,.rev-grid{grid-template-columns:1fr}
-  .gal-btn{display:none}
-  .gal-item{flex-basis:min(80%,300px)}
+  /* arrows overlay the track edges on phones rather than flanking it, so they
+     do not eat width off an already narrow screen. swiping still works. */
+  .gal{position:relative;gap:0}
+  .gal-btn{
+    position:absolute;top:calc(50% - 22px);z-index:2;width:44px;height:44px;
+    background:rgba(233,231,226,.93);border-color:rgba(20,22,26,.14);
+    box-shadow:0 4px 16px rgba(20,22,26,.28);backdrop-filter:blur(6px);
+  }
+  .gal-prev{left:4px}
+  .gal-next{right:4px}
+  .gal-item{flex-basis:min(84%,320px)}
   .gal-track{padding-inline:0}
   /* the cut-out runs edge to edge and its bottom lands on the dark section
      below. .wrap is viewport minus 2*--sp here, so negative side margins of
