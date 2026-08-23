@@ -195,6 +195,7 @@ p{margin:0 0 1.1em}
   content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(180deg,transparent 42%,rgba(10,11,13,.55) 70%,rgba(10,11,13,.92) 100%);
 }
+.svc figcaption h3{font:inherit;margin:0;color:inherit;letter-spacing:inherit;font-variation-settings:inherit}
 .svc figcaption{
   position:absolute;left:1.05rem;right:1.05rem;bottom:.9rem;z-index:1;
   font-family:var(--ff-d);font-variation-settings:"wdth" 108,"wght" 750;
