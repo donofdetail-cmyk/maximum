@@ -46,7 +46,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Barlow:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Barlow:wght@400;500;600;700&display=swap">
-<link rel="preload" as="image" href="assets/img/van-cut-1000.webp" type="image/webp" imagesrcset="assets/img/van-cut-700.webp 700w, assets/img/van-cut-1000.webp 1000w, assets/img/van-cut-1400.webp 1400w" imagesizes="min(1080px, 92vw)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img/hero-900.webp" type="image/webp" imagesrcset="assets/img/hero-640.webp 640w, assets/img/hero-900.webp 900w, assets/img/hero-1280.webp 1280w" imagesizes="100vw" fetchpriority="high">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -72,6 +72,12 @@
 
 <!-- ===================== HERO ===================== -->
 <section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <picture>
+      <source type="image/webp" srcset="assets/img/hero-640.webp 640w, assets/img/hero-900.webp 900w, assets/img/hero-1280.webp 1280w" sizes="100vw">
+      <img src="assets/img/hero.jpg" alt="" width="640" height="480" fetchpriority="high" decoding="async">
+    </picture>
+  </div>
   <div class="hero-grid wrap">
     <div class="hero-copy">
       <h1 class="sweep">A Premium Mobile Car Detailing Company in Reno, NV</h1>
@@ -84,12 +90,6 @@
 
   </div>
 
-  <div class="hero-van">
-    <picture>
-      <source type="image/webp" srcset="assets/img/van-cut-700.webp 700w, assets/img/van-cut-1000.webp 1000w, assets/img/van-cut-1400.webp 1400w" sizes="min(1080px, 92vw)">
-      <img src="assets/img/van-cut.png" alt="The Maximum Mobile Detailing van, wrapped with the logo and 775-374-1281" width="2158" height="1478" fetchpriority="high" decoding="async">
-    </picture>
-  </div>
 </section>
 
 <!-- ===================== SERVICES ===================== -->
@@ -99,9 +99,6 @@
       <h2>Top Detailing Services Near You</h2>
     </header>
 
-    <!-- TODO: paint correction, boat and motorcycle are placeholders. Drop a 4:3
-         shot in at assets/img/svc-<name>.webp and swap the <div class="svc-ph">
-         for an <img> like the others. -->
     <div class="svc-grid">
       <figure class="svc" id="car-detailing">
         <img src="assets/img/svc-car-detailing.webp" alt="Red pickup truck detailed and parked in a Reno driveway" width="900" height="675" loading="lazy" decoding="async">
@@ -109,7 +106,7 @@
       </figure>
 
       <figure class="svc" id="paint-correction">
-        <div class="svc-ph" role="img" aria-label="Photo placeholder: Paint correction on a vehicle in Reno"></div>
+        <img src="assets/img/svc-paint-correction.webp" alt="Porsche 911 GT3 RS after paint correction, Reno NV" width="900" height="675" loading="lazy" decoding="async">
         <figcaption>Paint Correction</figcaption>
       </figure>
 
@@ -124,12 +121,12 @@
       </figure>
 
       <figure class="svc" id="boat-detailing">
-        <div class="svc-ph" role="img" aria-label="Photo placeholder: Boat hull being detailed near Reno"></div>
+        <img src="assets/img/svc-boat-detailing.webp" alt="Wake boat detailed and polished on its trailer near Reno" width="900" height="675" loading="lazy" decoding="async">
         <figcaption>Boat &amp; Watercraft Detailing</figcaption>
       </figure>
 
       <figure class="svc" id="motorcycle-detailing">
-        <div class="svc-ph" role="img" aria-label="Photo placeholder: Motorcycle chrome being polished in Reno"></div>
+        <img src="assets/img/svc-motorcycle-detailing.webp" alt="Motorcycle detailed alongside the Maximum Mobile Detailing van" width="900" height="675" loading="lazy" decoding="async">
         <figcaption>Motorcycle Detailing</figcaption>
       </figure>
     </div>
@@ -165,12 +162,16 @@
           <figcaption><b>Interior detail</b>Mercedes-Benz</figcaption>
         </figure>
         <figure class="gal-item">
-          <img src="assets/img/gal-4.webp" alt="Jeep Wrangler covered in foam during an exterior detail" width="900" height="675" loading="lazy" decoding="async">
-          <figcaption><b>Exterior detail</b>Jeep Wrangler</figcaption>
+          <img src="assets/img/gal-4.webp" alt="Jeep Wrangler covered in foam during a two bucket hand wash" width="900" height="675" loading="lazy" decoding="async">
+          <figcaption><b>Wash and decontamination</b>Jeep Wrangler</figcaption>
         </figure>
         <figure class="gal-item">
-          <img src="assets/img/gal-6.webp" alt="Yellow Jeep Wrangler Rubicon after an exterior detail in Reno" width="900" height="675" loading="lazy" decoding="async">
-          <figcaption><b>Exterior detail</b>Jeep Wrangler Rubicon</figcaption>
+          <img src="assets/img/gal-5.webp" alt="Range Rover Sport detailed and polished in a Reno driveway" width="900" height="675" loading="lazy" decoding="async">
+          <figcaption><b>Exterior detail</b>Range Rover Sport</figcaption>
+        </figure>
+        <figure class="gal-item">
+          <img src="assets/img/gal-6.webp" alt="Classic sedan rear seats with the leather cleaned and conditioned" width="900" height="675" loading="lazy" decoding="async">
+          <figcaption><b>Leather restored</b>Classic sedan</figcaption>
         </figure>
       </div>
       <button class="gal-btn gal-next" type="button" aria-label="More photos" aria-controls="gal-track">
@@ -342,7 +343,6 @@
   <div class="wrap ftr-in">
     <div class="ftr-brand">
       <img src="assets/img/logo-mark.png" alt="Maximum Mobile Detailing logo" width="150" height="117" loading="lazy" decoding="async">
-      <p>Car detailing, paint correction, ceramic coating, RV, boat and motorcycle detailing, done at your address across Reno, Sparks and the North Valleys.</p>
     </div>
 
     <div class="ftr-nap">

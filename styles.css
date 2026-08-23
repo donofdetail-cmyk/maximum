@@ -108,25 +108,26 @@ p{margin:0 0 1.1em}
    HERO
    ========================================================================== */
 .hero{position:relative;padding:clamp(2rem,4.5vw,3.4rem) 0 clamp(3rem,6vw,4.5rem);overflow:hidden;isolation:isolate}
-/* the van is cut out of its background and parked under the copy. it swoops
-   in from the right on load, nose first, the direction it actually faces. */
-.hero-van{position:relative;z-index:1;width:100%;margin-top:clamp(.5rem,2vw,1.5rem);overflow:hidden}
-.hero-van img{
-  display:block;margin-inline:auto;width:auto;height:auto;
-  /* bounded on both axes so a wide screen cannot stretch the hero past a
-     screenful, and a narrow one still gets a decent sized van */
-  max-width:min(1080px,94vw);max-height:min(46vh,440px);
+/* full bleed photo behind the hero. the scrim is heaviest top and bottom:
+   top so the headline holds, bottom so it hands off to the dark section. */
+.hero-bg{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.hero-bg img{
+  width:100%;height:100%;object-fit:cover;object-position:52% 56%;
+  /* the source is only 640px wide, so it gets scaled up. a hair of blur turns
+     the upscaling mush into something that reads as shallow depth of field. */
+  filter:blur(.6px) saturate(1.04);transform:scale(1.03);
 }
 .hero::before{
   content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
   background:
-    radial-gradient(62% 55% at 22% 16%,rgba(220,27,34,.20),transparent 64%),
-    radial-gradient(55% 50% at 84% 74%,rgba(185,192,199,.07),transparent 60%);
+    radial-gradient(72% 60% at 50% 44%,rgba(10,11,13,.74),rgba(10,11,13,.5) 70%,rgba(10,11,13,.3)),
+    linear-gradient(180deg,rgba(10,11,13,.8) 0%,rgba(10,11,13,.48) 32%,rgba(10,11,13,.62) 66%,rgba(10,11,13,.97) 100%),
+    radial-gradient(64% 56% at 18% 14%,rgba(220,27,34,.16),transparent 62%);
 }
 .hero-grid{position:relative;z-index:2;display:grid;place-items:center;text-align:center;
-  padding-block:clamp(1.5rem,4vw,2.8rem) 0}
-.hero h1{color:#fff;margin:0 0 .4em;font-variation-settings:"wdth" 118,"wght" 850;max-width:17ch;margin-inline:auto}
-.lede{font-size:var(--t-lg);line-height:1.55;color:var(--chrome);max-width:56ch;margin-inline:auto}
+  min-height:min(66vh,600px);padding-block:clamp(2rem,5vw,3.4rem)}
+.hero h1{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.7),0 4px 44px rgba(0,0,0,.55);margin:0 0 .4em;font-variation-settings:"wdth" 118,"wght" 850;max-width:17ch;margin-inline:auto}
+.lede{font-size:var(--t-lg);line-height:1.55;color:#E8ECEF;text-shadow:0 1px 10px rgba(0,0,0,.8);max-width:56ch;margin-inline:auto}
 .hero-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:.85rem;margin:2.1rem 0 0}
 
 /* the sweep: one orchestrated moment on load */
@@ -145,12 +146,6 @@ p{margin:0 0 1.1em}
   .hero-copy>*:nth-child(4){animation-delay:.26s}
   .hero-copy>*:nth-child(5){animation-delay:.34s}
   @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-  .hero-van img{animation:swoop 1.15s cubic-bezier(.16,.84,.28,1) .3s both}
-  @keyframes swoop{
-    from{opacity:0;transform:translate(30%,7%) scale(1.07)}
-    60%{opacity:1}
-    to{opacity:1;transform:none}
-  }
 }
 
 
