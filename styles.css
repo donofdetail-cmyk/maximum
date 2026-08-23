@@ -111,7 +111,12 @@ p{margin:0 0 1.1em}
 /* the van is cut out of its background and parked under the copy. it swoops
    in from the right on load, nose first, the direction it actually faces. */
 .hero-van{position:relative;z-index:1;width:100%;margin-top:clamp(.5rem,2vw,1.5rem);overflow:hidden}
-.hero-van img{display:block;width:min(1080px,92vw);height:auto;margin-inline:auto}
+.hero-van img{
+  display:block;margin-inline:auto;width:auto;height:auto;
+  /* bounded on both axes so a wide screen cannot stretch the hero past a
+     screenful, and a narrow one still gets a decent sized van */
+  max-width:min(1080px,94vw);max-height:min(46vh,440px);
+}
 .hero::before{
   content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
   background:
