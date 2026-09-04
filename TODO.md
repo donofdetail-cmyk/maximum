@@ -23,6 +23,11 @@ Kill the forwarding rule in the GoDaddy dashboard, then point the domain at wher
 site is hosted. Nothing in this repo can fix it, the redirect happens before the request
 ever reaches the files.
 
+The Google Business Profile has the same typo. Its Website field is
+`https://www.maximummobiledetail.com/`, checked 2026-09-04. Fix it to
+`https://maximummobiledetailing.com/` in the GBP dashboard, or every click off the map
+pack keeps landing nowhere.
+
 ### 1.2 Reviews — DONE
 The REVIEWS block carries three real Google reviews word for word, and the
 "See all reviews on Google" button points at the Google Business Profile.
