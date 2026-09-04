@@ -10,23 +10,21 @@ and nothing to activate.
 
 ## 1. Blockers
 
-### 1.1 Domain — the redirect has to go
-Live domain is `https://maximummobiledetailing.com`, registered on GoDaddy
-(ns05/ns06.domaincontrol.com). It is set in the canonical tag, OG and Twitter tags,
-the JSON-LD, robots.txt and sitemap.xml.
+### 1.1 Domain — needs nameservers
+Live domain is `https://maximummobiledetail.com`. It is set in the canonical tag, OG and
+Twitter tags, the JSON-LD, robots.txt and sitemap.xml, and it is the URL on the Google
+Business Profile. All correct, nothing to swap.
 
-**As of 2026-09-04 that domain 301-redirects to `maximummobiledetail.com`, which does not
-exist.** No DNS record, NXDOMAIN. Every visitor, and everyone clicking the website link on
-the Google Business Profile, lands on a dead page.
+**It has no DNS.** Checked 2026-09-04: registered at GoDaddy since 2024-04-06 and paid
+through 2027, but no nameservers are delegated to it, so every public resolver returns
+NXDOMAIN and the domain reaches nothing at all.
 
-Kill the forwarding rule in the GoDaddy dashboard, then point the domain at wherever the
-site is hosted. Nothing in this repo can fix it, the redirect happens before the request
-ever reaches the files.
+`maximummobiledetailing.com` (the older 2020 domain, also yours, on ns05/ns06.domaincontrol.com)
+already 301-forwards to it. That forwarding is set up right and should stay. It just
+forwards into a domain that currently has no DNS.
 
-The Google Business Profile has the same typo. Its Website field is
-`https://www.maximummobiledetail.com/`, checked 2026-09-04. Fix it to
-`https://maximummobiledetailing.com/` in the GBP dashboard, or every click off the map
-pack keeps landing nowhere.
+To go live: in GoDaddy, assign nameservers to `maximummobiledetail.com` and point it at
+the host, then deploy. Nothing in this repo can substitute for that.
 
 ### 1.2 Reviews — DONE
 The REVIEWS block carries three real Google reviews word for word, and the

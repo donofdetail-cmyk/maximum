@@ -16,4 +16,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://maximummobiledetailing.com/sitemap.xml
+Sitemap: https://maximummobiledetail.com/sitemap.xml
