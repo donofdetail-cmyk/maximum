@@ -10,9 +10,18 @@ and nothing to activate.
 
 ## 1. Blockers
 
-### 1.1 Domain — DONE
-Live domain is `https://maximummobiledetail.com`. It is set in the canonical tag,
-OG and Twitter tags, the JSON-LD, robots.txt and sitemap.xml. Nothing left to swap.
+### 1.1 Domain — the redirect has to go
+Live domain is `https://maximummobiledetailing.com`, registered on GoDaddy
+(ns05/ns06.domaincontrol.com). It is set in the canonical tag, OG and Twitter tags,
+the JSON-LD, robots.txt and sitemap.xml.
+
+**As of 2026-09-04 that domain 301-redirects to `maximummobiledetail.com`, which does not
+exist.** No DNS record, NXDOMAIN. Every visitor, and everyone clicking the website link on
+the Google Business Profile, lands on a dead page.
+
+Kill the forwarding rule in the GoDaddy dashboard, then point the domain at wherever the
+site is hosted. Nothing in this repo can fix it, the redirect happens before the request
+ever reaches the files.
 
 ### 1.2 Reviews — DONE
 The REVIEWS block carries three real Google reviews word for word, and the
