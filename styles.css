@@ -349,11 +349,9 @@ p{margin:0 0 1.1em}
 .ftr-btm{margin-top:2.6rem;padding:1.5rem 0 2rem;border-top:1px solid rgba(185,192,199,.12)}
 .copy{margin:0;font-size:var(--t-xs);color:var(--chrome-dim)}
 .ftr-end{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1.5rem}
-.credit{display:flex;align-items:center;gap:.6rem;margin:0;flex:none}
-.credit span{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;color:var(--chrome-dim)}
-.credit a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;border-radius:8px;line-height:0;transition:opacity .16s ease,transform .16s ease}
-.credit a:hover{opacity:.82;transform:translateY(-1px)}
-.credit img{width:34px;height:34px;border-radius:8px;display:block}
+.credit{margin:0;flex:none;font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;color:var(--chrome-dim)}
+.credit a{color:inherit;transition:color .16s ease}
+.credit a:hover{color:var(--chrome)}
 
 /* ==========================================================================
    STICKY MOBILE BAR

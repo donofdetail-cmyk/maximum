@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
+# working files, not part of the site. blocked in case the whole folder ships.
+Disallow: /_src/
+Disallow: /TODO.md
 
 # AI crawlers are welcome. Being cited in an AI answer is free advertising.
 User-agent: GPTBot

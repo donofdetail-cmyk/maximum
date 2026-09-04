@@ -14,12 +14,11 @@ and nothing to activate.
 Live domain is `https://maximummobiledetail.com`. It is set in the canonical tag,
 OG and Twitter tags, the JSON-LD, robots.txt and sitemap.xml. Nothing left to swap.
 
-### 1.2 Replace the placeholder reviews
-`index.html`, the REVIEWS block. All three quotes are placeholder text and say so.
-Paste in real Google reviews word for word with the reviewer's real first name and last
-initial, then point the "Read all reviews on Google" link at the Google Business Profile.
-
-Do not publish the placeholder text.
+### 1.2 Reviews — DONE
+The REVIEWS block carries three real Google reviews word for word, and the
+"See all reviews on Google" button points at the Google Business Profile.
+The same three are marked up as `Review` nodes in the JSON-LD, so the
+`aggregateRating` (5.0 from 66) has visible backing on the page.
 
 ### 1.3 Confirm the phone number is text-capable
 Every CTA on the page is a `tel:` or `sms:` link to 775-374-1281. If that line cannot
@@ -48,13 +47,16 @@ The map pack is where most of this traffic will come from, and the site alone wi
 
 - [ ] Claim and verify the GBP. Primary category: **Car detailing service**.
 - [ ] Set it as a **service area business** so the radius shows instead of a street address. List Reno, Sparks, Spanish Springs, Sun Valley, Verdi, Washoe Valley.
-- [ ] Hours 7am to 7pm daily and phone 775-374-1281, matching the footer character for character. NAP consistency is a real ranking factor.
-- [ ] Paste the GBP URL into two places in `index.html`: the footer link and the `sameAs` array in the JSON-LD.
-- [ ] Confirm the `postalCode` in the JSON-LD matches the GBP. It is `89501` as a stand-in.
-- [ ] Add Facebook and Instagram to the same `sameAs` array.
+- [x] Hours and phone match, checked against the live GBP on 2026-09-04. Both say Monday to Friday, 8:00am to 5:00pm, weekends closed, 775-374-1281. If the GBP hours ever change, change the footer and the JSON-LD `openingHoursSpecification` with them.
+- [x] `postalCode` is gone from the JSON-LD. The GBP is a service area business and hides the
+  street address, so publishing a ZIP would have been a NAP mismatch. `areaServed` carries the
+  coverage instead. Do not add an address back unless the GBP starts showing one.
 
-Once you have real review counts, add `aggregateRating` to the LocalBusiness schema.
-It is deliberately absent. Fabricated ratings get flagged.
+The GBP, Facebook, Instagram, Yelp and BBB URLs are already in the JSON-LD `sameAs` array.
+
+`aggregateRating` is already in the LocalBusiness schema: 5.0 from 66 reviews, read off
+the GBP on 2026-08-20. Update the count in both the schema and the line under the
+REVIEWS heading when it drifts.
 
 ---
 
@@ -74,6 +76,15 @@ It is deliberately absent. Fabricated ratings get flagged.
 - **No contact form.** Call and text only.
 - **No gold or secondary accent.** Palette is the logo: black, chrome, and red reserved for CTAs.
 
+## 5b. What ships
+
+The web root now holds site files only. Every working file lives in `_src/`, which is not
+part of the site: the original photos, `maximum.jpg`, `logo.png`, the cutout PNG, the .docx.
+
+`robots.txt` blocks `/_src/` and `/TODO.md` as a safety net in case the whole folder gets
+uploaded, but the clean move is to upload `index.html`, `404.html`, `styles.css`,
+`script.js`, `robots.txt`, `sitemap.xml`, `site.webmanifest` and `assets/` only.
+
 ## 6. Files
 
 ```
@@ -81,17 +92,16 @@ index.html       the whole site, 9 sections
 styles.css       one stylesheet, no framework
 script.js        mobile nav, gallery slider, FAQ accordion
 404.html
-robots.txt       AI crawlers explicitly allowed
+robots.txt       AI crawlers explicitly allowed, _src blocked
 sitemap.xml
 site.webmanifest
-assets/img/      logo derivatives, favicons, OG image, DON credit mark
-maximum.jpg      original logo source
-logo.png         Don of Detail mark you dropped in
+assets/img/      logo derivatives, favicons, OG image
+_src/            working files, never uploaded: source photos, maximum.jpg (logo source),
+                 logo.png, the cutout PNG, Copy of Pictures.docx
 ```
 
-`assets/img/logo-mark.png` is the Maximum logo with the black keyed out to transparency.
+`assets/img/logo-mark.webp` is the Maximum logo with the black keyed out to transparency.
 That is the one the site uses.
 
-The footer credit links the DON mark dofollow to https://donofdetail.com in a new tab.
-No `rel="nofollow"`, so it passes equity. Alt text is "Don of Detail", which is the
-anchor text Google reads for an image link.
+The footer credit reads "Built by Rankdon" and links dofollow to https://rankdon.com in a
+new tab. No `rel="nofollow"`, so it passes equity, and the anchor text is the brand name.
